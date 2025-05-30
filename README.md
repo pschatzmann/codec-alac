@@ -22,7 +22,7 @@ This Arduino library provides a portable implementation of the ALAC encoder and 
 
 ## Documentation
 
-- [Decoder](https://pschatzmann.github.io/codec-alac/html)
-- Encoder
+- [Decoder](https://pschatzmann.github.io/codec-alac/html/classALACDecoder.html)
+- [Encoder](https://pschatzmann.github.io/codec-alac/html/classALACEncoder.html)
 
 
