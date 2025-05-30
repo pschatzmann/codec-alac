@@ -20,3 +20,9 @@ This Arduino library provides a portable implementation of the ALAC encoder and 
 2. In Arduino IDE, go to Sketch > Include Library > Add .ZIP Library
 3. Select the downloaded ZIP file
 
+## Documentation
+
+- [Decoder](https://pschatzmann.github.io/codec-alac/html)
+- Encoder
+
+
