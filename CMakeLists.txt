@@ -19,4 +19,4 @@ add_library (codec-alac ${SRC_LIST_C} ${SRC_LIST_CPP})
 target_include_directories(codec-alac PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src ${CMAKE_CURRENT_SOURCE_DIR}/src/alac/codec )
 
 # disable multi-character character constant warning
-target_compile_options(codec-alac PUBLIC -Wno-multichar)
+target_compile_options(codec-alac PRIVATE -Wno-multichar)
