@@ -29,6 +29,8 @@
 #pragma once
 #endif
 
+#pragma GCC diagnostic ignored "-Wmultichar"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
