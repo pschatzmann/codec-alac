@@ -36,6 +36,8 @@ The [Codec API](https://github.com/pschatzmann/arduino-audio-tools/wiki/Encoding
 
 ### Example: Encoding and Decoding a Sine Wave
 
+Here is a simple example that generates a sine wave, encodes it, decodes it and writes the final result as CSV. We use custom frame size of 1024 samples.
+
 ```C++
 #include "AudioTools.h"
 #include "AudioTools/AudioCodecs/CodecALAC.h"
@@ -46,8 +48,8 @@ AudioInfo info(44100, 2, 16);
 SineWaveGenerator<int16_t> sineWave(32000);  // subclass of SoundGenerator with max amplitude of 32000
 GeneratedSoundStream<int16_t> sound(sineWave); // Stream generated from sine wave
 CsvOutput<int16_t> out(Serial);
-EncoderALAC enc_alac;
-DecoderALAC dec_alac;
+EncoderALAC enc_alac(1024);
+DecoderALAC dec_alac(1024);
 EncodedAudioStream decoder(&out, &dec_alac); // decode and write as csv
 EncodedAudioStream encoder(&decoder, &enc_alac); // encode and write to decoder
 StreamCopy copier(encoder, sound);     
