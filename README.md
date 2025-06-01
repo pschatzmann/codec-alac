@@ -10,8 +10,8 @@ This Arduino library provides a portable implementation of the ALAC encoder and 
 
 - Decode ALAC audio to PCM
 - Encode PCM audio to ALAC format
-- Support for 16-bit and 24-bit audio
-- Support for mono and stereo audio
+- Support for 16-bit, 24-bit and 32-bit audio
+- Support for mono, stereo audio and even more channels
 - Compatible with standard ALAC files
 
 ## Installation
@@ -19,6 +19,17 @@ This Arduino library provides a portable implementation of the ALAC encoder and 
 1. Download the latest release as ZIP
 2. In Arduino IDE, go to Sketch > Include Library > Add .ZIP Library
 3. Select the downloaded ZIP file
+
+Or you can git clone this project into the Arduino libraries folder e.g. with
+
+```
+cd  ~/Documents/Arduino/libraries
+git clone https://github.com/pschatzmann/codec-alac.git
+```
+
+This project can also be built (e.g. on your desktop) with cmake:
+
+
 
 ## Important Usage Notes
 
