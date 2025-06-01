@@ -30,7 +30,6 @@ git clone https://github.com/pschatzmann/codec-alac.git
 This project can also be built (e.g. on your desktop) with cmake:
 
 
-
 ## Important Usage Notes
 
 **The original ALAC API is complex and poorly documented.** After struggling with the direct implementation, I strongly recommend using the simplified wrapper in the [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools) library instead of using this library directly.
@@ -88,7 +87,7 @@ void setup() {
   //dec_alac.setCodecConfig(enc_alac.config()); 
   //dec_alac.setCodecConfig(enc_alac.binaryConfig());
 
-  // start decoder
+  // start decoder (optionally providing the AudioInfo)
   decoder.begin(info);
   
   Serial.println("Test started...");
@@ -98,6 +97,11 @@ void loop() {
   copier.copy();
 }
 ```
+As you can see above, there are three alternaive ways to synchronize the configuration:
+
+- using dec_alac.setCodecConfig(enc_alac.config()); (= ALACSpecificConfig object)
+- using setCodecConfig(enc_alac.binaryConfig()); (= Matical Cookie)
+- using the AudioTools AudioInfo and the FrameSize in the constructor
 
 ## Direct API Documentation
 
