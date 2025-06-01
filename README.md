@@ -100,7 +100,7 @@ void loop() {
 As you can see above, there are three alternaive ways to synchronize the configuration:
 
 - using dec_alac.setCodecConfig(enc_alac.config()); (= ALACSpecificConfig object)
-- using setCodecConfig(enc_alac.binaryConfig()); (= Matical Cookie)
+- using setCodecConfig(enc_alac.binaryConfig()); (= Magical Cookie)
 - using the AudioTools AudioInfo and the FrameSize in the constructor
 
 ## Direct API Documentation
