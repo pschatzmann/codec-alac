@@ -117,6 +117,7 @@ ALAC encoding and decoding can be memory intensive. For ESP32 devices, you may n
 ```C++
 SET_LOOP_TASK_STACK_SIZE(16*1024); // 16KB for ESP32
 ```
+and use PSRAM.
 
 ## License
 
