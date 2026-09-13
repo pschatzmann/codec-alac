@@ -1,5 +1,15 @@
 cmake_minimum_required(VERSION 3.16)
 
+if (DEFINED ESP_PLATFORM)
+  # idf component
+  idf_component_register(
+      SRC_DIRS src src/alac/codec
+      INCLUDE_DIRS src src/alac/codec
+  )
+
+  target_compile_options(${COMPONENT_LIB} PUBLIC -Wno-error -Wno-multichar)
+
+else()
 
 # set the project name
 project(codec-alac)
@@ -20,3 +30,5 @@ target_include_directories(codec-alac PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src ${C
 
 # disable multi-character character constant warning
 target_compile_options(codec-alac PRIVATE -Wno-multichar)
+
+endif()
